@@ -18,6 +18,11 @@ export const handler:Handlers<data> = {
         })
         if(data.status !== 200) throw new Error("Error en la respuesta de la api Country")
         const response = await data.json()
+        const countrySeparated = country.split('%20')
+        if(countrySeparated[1]){
+        const countryRevamped = countrySeparated[0] +" "+ countrySeparated[1]
+        return ctx.render({country: countryRevamped, capital: response[0].capital})
+        }
         return ctx.render({country: country, capital: response[0].capital})
     }
 }

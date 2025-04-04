@@ -20,6 +20,7 @@ export const handler:Handlers<data> = {
         })
         if(data.status !== 200) throw new Error("Error en la respuesta de la api City")
         const response = await data.json()
+        console.log(response)
         const urlApiWeather = "https://api.api-ninjas.com/v1/weather?lat="+response[0].latitude+"&lon="+response[0].longitude
         const dataWeather = await fetch(urlApiWeather,{
             headers: {

@@ -127,3 +127,25 @@ html {
 .tabular-nums {
   font-variant-numeric: tabular-nums;
 }
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #333;
+  width: 100%;
+  gap: 30px;
+  padding: 20px 20px;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  width: 100%;
+  gap: 30px;
+  padding: 20px 20px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
