@@ -16,7 +16,7 @@ export const handler:Handlers<data> = {
             'X-Api-Key': apiKey
             }
         })
-        if(data.status !== 200) throw new Error("Error en la respuesta de la api Phone")
+        if(data.status !== 200) throw new Error("Error en la respuesta de la api Country")
         const response = await data.json()
         return ctx.render({country: country, capital: response[0].capital})
     }
