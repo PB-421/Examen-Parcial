@@ -3,7 +3,7 @@
 export default function Header() {
     return (
         <div class="footer">
-            <p>Copyright: Pablo B</p>
+            <p>Copyright: Nebrija 2025</p>
         </div>
     )
 }

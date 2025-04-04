@@ -18,6 +18,7 @@ export const handler:Handlers<data> = {
         })
         if(data.status !== 200) throw new Error("Error en la respuesta de la api Country")
         const response = await data.json()
+        //algunos paises, tienen espacios, con esto se lo quito
         const countrySeparated = country.split('%20')
         if(countrySeparated[1]){
         const countryRevamped = countrySeparated[0] +" "+ countrySeparated[1]
